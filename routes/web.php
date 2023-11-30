@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,4 +15,8 @@ Route::middleware([
     Route::get('/home', function () {
         return view('home');
     })->name('dashboard');
+
+    Route::controller(SongController::class)->group(function () {
+        route::get('/index/songs', 'index')->name('songs.index');
+    });
 });

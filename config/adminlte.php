@@ -298,7 +298,7 @@ return [
         ['header' => 'APARTADOS'],
         [
             'text' => 'Melodías',
-            'url'  => '/home',
+            'url'  => '/index/songs',
             'icon' => 'fas fa-music',
         ]
     ],
